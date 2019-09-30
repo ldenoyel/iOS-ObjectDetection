@@ -47,8 +47,8 @@ class YOLO: NSObject {
   private var model: MLModel?
   private let pixelBufferSize = CGSize(width: CGFloat(YOLO.inputSize),
                                        height: CGFloat(YOLO.inputSize))
-  private let inputName = "image"
-  private var classes = [Float](repeating: 0, count: 80)
+  private let inputName = "input1"
+  private var classes = [Float](repeating: 0, count: 2)
   private var anchors: [String: Array<Float>]!
   
   var confidenceThreshold: Float
@@ -143,7 +143,7 @@ class YOLO: NSObject {
           let y_pos = (sigmoid(bby) + Float(y)) * gridSize
           let width = exp(bbw) * self.anchors[name]![2 * box_i]
           let height = exp(bbh) * self.anchors[name]![2 * box_i + 1]
-          for c in 0 ..< 80 {
+          for c in 0 ..< classesCount {
             classes[c] = Float(pointer[offset(ch: boxOffset + 5 + c, x: x, y: y)])
           }
           softmax(&classes)
