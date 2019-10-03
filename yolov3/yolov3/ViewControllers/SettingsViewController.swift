@@ -16,6 +16,7 @@ class SettingsViewController: UIViewController {
   @IBOutlet weak var iouLabel: UILabel!
   @IBOutlet weak var confLabel: UILabel!
   @IBOutlet weak var isSmoothed: UISwitch!
+  @IBOutlet weak var liveSwitch: UISwitch!
   
   var alert: UIAlertController?
   
@@ -40,6 +41,7 @@ class SettingsViewController: UIViewController {
     
     modelPicker.selectRow(pickerData.firstIndex(of: settings.modelType.description())!,
                           inComponent: 0, animated: true)
+    liveSwitch.isOn = UserDefaults.standard.bool(forKey: "liveModeEnabled")
   }
   
   @IBAction func save() {
@@ -73,7 +75,20 @@ class SettingsViewController: UIViewController {
     confLabel.text = String(format: "%.2f", confSlider.value)
     settings.confidenceThreshold = confSlider.value
   }
-
+  
+  @IBAction func liveOption(_ sender: UISwitch) {
+    guard var viewControllers = tabBarController?.viewControllers else { return }
+    if sender.isOn {
+      UserDefaults.standard.set(true, forKey: "liveModeEnabled")
+      let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OnlineViewController")
+      viewControllers.insert(vc, at: 0)
+    } else {
+      UserDefaults.standard.set(false, forKey: "liveModeEnabled")
+      viewControllers.remove(at: 0)
+    }
+    tabBarController?.setViewControllers(viewControllers, animated: false)
+  }
+  
 }
 
 extension SettingsViewController: SettingsDelegate {

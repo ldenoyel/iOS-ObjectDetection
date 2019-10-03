@@ -54,6 +54,10 @@ class OnlineViewController: UIViewController {
     }
   }
   
+  deinit {
+    print("OnlineViewController deinit")
+  }
+  
   override func viewDidDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
     self.stopVideo()
@@ -70,7 +74,7 @@ class OnlineViewController: UIViewController {
   }
   
   override var preferredStatusBarStyle: UIStatusBarStyle {
-    return .lightContent
+    return .default
   }
   
   func startVideo() {

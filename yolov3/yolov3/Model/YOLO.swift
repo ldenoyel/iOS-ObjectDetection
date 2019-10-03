@@ -41,7 +41,7 @@ enum YOLOType {
 
 class YOLO: NSObject {
   
-  static let inputSize: Float = 832.0
+  static let inputSize: Float = 416.0
   static let boxesPerCell: Int = 3
   
   private var model: MLModel?

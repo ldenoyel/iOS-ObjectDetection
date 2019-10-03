@@ -12,6 +12,8 @@ class PhotoViewController: UIViewController {
   
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var detectButton: UIButton!
+  @IBOutlet weak var damageView: UIView!
+  @IBOutlet weak var costButton: UIButton!
   
   var processed = false
   var processStarted = false
@@ -37,11 +39,25 @@ class PhotoViewController: UIViewController {
     modelProvider.delegate = self
     predictionLayer.clear()
     processed = false
-    detectButton.setTitle("Detect", for: .normal)
+    detectButton.setTitle("Détecter", for: .normal)
+    damageView.isHidden = true
+    costButton.isHidden = true
   }
   
   override var preferredStatusBarStyle: UIStatusBarStyle {
     return .default
+  }
+  
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    if detectButton.layer.cornerRadius == 0 {
+      detectButton.layer.cornerRadius = detectButton.frame.height / 2
+      detectButton.layer.masksToBounds = true
+    }
+    if costButton.layer.cornerRadius == 0 {
+      costButton.layer.cornerRadius = detectButton.frame.height / 2
+      costButton.layer.masksToBounds = true
+    }
   }
   
   @IBAction func choosePhoto() {
@@ -80,10 +96,16 @@ class PhotoViewController: UIViewController {
       modelProvider.predict(frame: image)
     } else {
       processed = false
-      detectButton.setTitle("Detect", for: .normal)
+      detectButton.setTitle("Détecter", for: .normal)
+      damageView.isHidden = true
+      costButton.isHidden = true
       predictionLayer.hide()
       predictionLayer.clear()
     }
+  }
+  
+  @IBAction func damageCost(_ sender: Any) {
+    damageView.isHidden = false
   }
   
   func showAlert(title: String, msg: String) {
@@ -116,7 +138,8 @@ extension PhotoViewController: ModelProviderDelegate {
       predictionLayer.addBoundingBoxes(predictions: predictions)
       predictionLayer.show()
       processed = true
-      detectButton.setTitle("Clear", for: .normal)
+      detectButton.setTitle("Recommencer", for: .normal)
+      costButton.isHidden = false
       processStarted = false
     }
   }
@@ -141,7 +164,9 @@ extension PhotoViewController: UIImagePickerControllerDelegate, UINavigationCont
       predictionLayer.update(imageViewFrame: imageView.frame, imageSize: pickedImage.size)
       predictionLayer.clear()
       processed = false
-      detectButton.setTitle("Detect", for: .normal)
+      detectButton.setTitle("Détecter", for: .normal)
+      damageView.isHidden = true
+      costButton.isHidden = true
     }
     self.dismiss(animated: true)
   }
