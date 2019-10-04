@@ -414,6 +414,7 @@ depuis la galerie</string>
                         <outlet property="detectButton" destination="NOX-BE-c4N" id="zsK-Mw-iUb"/>
                         <outlet property="folderButtonStackView" destination="eb7-JS-kar" id="Ak4-lx-fSX"/>
                         <outlet property="imageView" destination="g4q-q4-Iqv" id="sQa-Xe-mbn"/>
+                        <outlet property="photoButtonsStackView" destination="biV-e5-UGy" id="1jP-B8-c7G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqC-zD-nho" userLabel="First Responder" sceneMemberID="firstResponder"/>

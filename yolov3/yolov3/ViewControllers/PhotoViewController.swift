@@ -16,6 +16,7 @@ class PhotoViewController: UIViewController {
   @IBOutlet weak var costButton: UIButton!
   @IBOutlet weak var cameraButtonStackView: UIStackView!
   @IBOutlet weak var folderButtonStackView: UIStackView!
+  @IBOutlet weak var photoButtonsStackView: UIStackView!
   
   var processed = false
   var processStarted = false
@@ -172,6 +173,7 @@ extension PhotoViewController: UIImagePickerControllerDelegate, UINavigationCont
     [UIImagePickerController.InfoKey : Any]) {
     if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
       self.imageView.image = pickedImage
+      photoButtonsStackView.isHidden = true
       self.imageView.backgroundColor = .clear
       predictionLayer.update(imageViewFrame: imageView.frame, imageSize: pickedImage.size)
       predictionLayer.clear()

@@ -31,6 +31,11 @@ class TabBarController: UITabBarController {
   
   func setupItems() {
     tabBar.selectionIndicatorImage = UIImage(named: "item-selection")
+    for subview in tabBar.subviews {
+      if let label = subview as? UILabel {
+        print("ITEM: \(label.text)")
+      }
+    }
     if let items = tabBar.items {
       for item in items {
         if UIDevice.current.userInterfaceIdiom == .phone {
@@ -51,8 +56,9 @@ class TabBarController: UITabBarController {
   }
   
   override func viewDidLayoutSubviews() {
-    tabBar.frame.origin.y = view.frame.height - 64
-    tabBar.frame.size.height = 64
+    let tabBarheight = (64 + UIApplication.shared.windows[0].safeAreaInsets.bottom)
+    tabBar.frame.origin.y = view.frame.height - tabBarheight
+    tabBar.frame.size.height = tabBarheight
     super.viewDidLayoutSubviews()
   }
 
