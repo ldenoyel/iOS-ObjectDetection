@@ -31,17 +31,23 @@ class TabBarController: UITabBarController {
   
   func setupItems() {
     tabBar.selectionIndicatorImage = UIImage(named: "item-selection")
-    for subview in tabBar.subviews {
-      if let label = subview as? UILabel {
-        print("ITEM: \(label.text)")
-      }
-    }
     if let items = tabBar.items {
       for item in items {
         if UIDevice.current.userInterfaceIdiom == .phone {
           item.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -22.5)
         } else {
-          item.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 0)
+          var systemInfo = utsname()
+          uname(&systemInfo)
+          let machineMirror = Mirror(reflecting: systemInfo.machine)
+          let identifier = machineMirror.children.reduce("") { identifier, element in
+              guard let value = element.value as? Int8, value != 0 else { return identifier }
+              return identifier + String(UnicodeScalar(UInt8(value)))
+          }
+          if identifier == "iPad6,3" || identifier == "iPad6,4" {
+            item.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -8)
+          } else {
+            item.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 0)
+          }
         }
         item.setTitleTextAttributes([
           NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: .medium),
