@@ -345,41 +345,42 @@ depuis la galerie</string>
                                     <constraint firstItem="qQ6-02-yi1" firstAttribute="centerY" secondItem="P4i-yY-FaF" secondAttribute="centerY" id="wo1-eh-3kt"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="WWP-OE-alo">
-                                <rect key="frame" x="32" y="629" width="311" height="60"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmv-Ta-LpN">
-                                        <rect key="frame" x="0.0" y="0.0" width="136.66666666666666" height="60"/>
-                                        <color key="backgroundColor" red="0.090196078430000007" green="0.73333333329999995" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                        <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
-                                        <state key="normal" title="Chiffrer">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="damageCost:" destination="nHS-8v-nIf" eventType="touchUpInside" id="6b2-wg-wmb"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOX-BE-c4N">
-                                        <rect key="frame" x="174.66666666666663" y="0.0" width="136.33333333333337" height="60"/>
-                                        <color key="backgroundColor" red="0.090196078431372548" green="0.73333333333333328" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                        <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
-                                        <state key="normal" title="Détecter">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="processImage" destination="nHS-8v-nIf" eventType="touchUpInside" id="Qi0-kb-bps"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmv-Ta-LpN">
+                                <rect key="frame" x="34" y="629" width="136.66666666666666" height="60"/>
+                                <color key="backgroundColor" red="0.090196078430000007" green="0.73333333329999995" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="7rw-hm-52q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
+                                <state key="normal" title="Chiffrer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="damageCost:" destination="nHS-8v-nIf" eventType="touchUpInside" id="6b2-wg-wmb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOX-BE-c4N">
+                                <rect key="frame" x="204.66666666666663" y="629" width="136.33333333333337" height="60"/>
+                                <color key="backgroundColor" red="0.090196078431372548" green="0.73333333333333328" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="FXs-cr-6ri"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
+                                <state key="normal" title="Détecter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="processImage" destination="nHS-8v-nIf" eventType="touchUpInside" id="Qi0-kb-bps"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="NOX-BE-c4N" firstAttribute="width" secondItem="VTy-AE-jhW" secondAttribute="width" multiplier="1/2" constant="-51" id="2tC-mn-okE"/>
                             <constraint firstItem="P4i-yY-FaF" firstAttribute="leading" secondItem="VTy-AE-jhW" secondAttribute="leading" id="90H-P9-4ue"/>
-                            <constraint firstItem="VTy-AE-jhW" firstAttribute="bottom" secondItem="WWP-OE-alo" secondAttribute="bottom" constant="40" id="CjJ-2W-tSq"/>
-                            <constraint firstItem="VTy-AE-jhW" firstAttribute="trailing" secondItem="WWP-OE-alo" secondAttribute="trailing" constant="32" id="HvM-T3-Ky2"/>
+                            <constraint firstItem="pmv-Ta-LpN" firstAttribute="leading" secondItem="VTy-AE-jhW" secondAttribute="leading" constant="34" id="ANd-IB-NkB"/>
                             <constraint firstItem="biV-e5-UGy" firstAttribute="centerY" secondItem="Tfn-r7-9ya" secondAttribute="centerY" id="IZ3-vy-ofC"/>
                             <constraint firstItem="g4q-q4-Iqv" firstAttribute="leading" secondItem="VTy-AE-jhW" secondAttribute="leading" id="OeZ-PH-qm3"/>
                             <constraint firstItem="VTy-AE-jhW" firstAttribute="trailing" secondItem="P4i-yY-FaF" secondAttribute="trailing" id="Qj3-IA-SMI"/>
@@ -387,12 +388,15 @@ depuis la galerie</string>
                             <constraint firstItem="biV-e5-UGy" firstAttribute="centerX" secondItem="Tfn-r7-9ya" secondAttribute="centerX" id="Vdh-S9-aDu"/>
                             <constraint firstItem="g4q-q4-Iqv" firstAttribute="top" secondItem="VTy-AE-jhW" secondAttribute="top" id="X7g-3B-ufs"/>
                             <constraint firstItem="VTy-AE-jhW" firstAttribute="trailing" secondItem="m6N-hv-gMp" secondAttribute="trailing" id="ZwL-NJ-erb"/>
+                            <constraint firstItem="pmv-Ta-LpN" firstAttribute="width" secondItem="VTy-AE-jhW" secondAttribute="width" multiplier="1/2" constant="-51" id="aSV-RG-pK5"/>
                             <constraint firstItem="VTy-AE-jhW" firstAttribute="trailing" secondItem="g4q-q4-Iqv" secondAttribute="trailing" id="anG-K9-iy6"/>
+                            <constraint firstItem="VTy-AE-jhW" firstAttribute="bottom" secondItem="pmv-Ta-LpN" secondAttribute="bottom" constant="40" id="bNA-fK-Pvd"/>
                             <constraint firstItem="P4i-yY-FaF" firstAttribute="top" secondItem="VTy-AE-jhW" secondAttribute="top" id="g1a-lp-I9G"/>
                             <constraint firstItem="m6N-hv-gMp" firstAttribute="leading" secondItem="VTy-AE-jhW" secondAttribute="leading" id="j15-n2-b3X"/>
+                            <constraint firstItem="VTy-AE-jhW" firstAttribute="trailing" secondItem="NOX-BE-c4N" secondAttribute="trailing" constant="34" id="nI3-21-XIC"/>
                             <constraint firstItem="biV-e5-UGy" firstAttribute="width" secondItem="VTy-AE-jhW" secondAttribute="width" multiplier="0.8" id="nQH-F2-P2k"/>
                             <constraint firstItem="m6N-hv-gMp" firstAttribute="top" secondItem="P4i-yY-FaF" secondAttribute="bottom" id="oXi-ui-rQM"/>
-                            <constraint firstItem="WWP-OE-alo" firstAttribute="leading" secondItem="VTy-AE-jhW" secondAttribute="leading" constant="32" id="qTC-AI-WV6"/>
+                            <constraint firstItem="VTy-AE-jhW" firstAttribute="bottom" secondItem="NOX-BE-c4N" secondAttribute="bottom" constant="40" id="wVn-nm-Vze"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VTy-AE-jhW"/>
                     </view>
@@ -404,9 +408,11 @@ depuis la galerie</string>
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="nKx-f4-V7Z"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="cameraButtonStackView" destination="fyJ-06-Uur" id="o8K-UY-lIA"/>
                         <outlet property="costButton" destination="pmv-Ta-LpN" id="4ek-eU-n0t"/>
                         <outlet property="damageView" destination="m6N-hv-gMp" id="FZT-kc-339"/>
                         <outlet property="detectButton" destination="NOX-BE-c4N" id="zsK-Mw-iUb"/>
+                        <outlet property="folderButtonStackView" destination="eb7-JS-kar" id="Ak4-lx-fSX"/>
                         <outlet property="imageView" destination="g4q-q4-Iqv" id="sQa-Xe-mbn"/>
                     </connections>
                 </viewController>

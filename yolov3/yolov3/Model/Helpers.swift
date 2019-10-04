@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-let labels = ["porte avant", "dommage"]
+let labels = ["Porte avant", "Dommage"]
 
 struct ColorPallete {
   static let shared = ColorPallete()
   let colors: [CGColor]
   init() {
     colors = [
-      ColorPallete.rgba(244,67,54,1), ColorPallete.rgba(33,150,243,1),
+      ColorPallete.rgba(23,187,185,1), ColorPallete.rgba(193,20,20,1),
       ColorPallete.rgba(156,39,176,1), ColorPallete.rgba(0,150,136,1),
       ColorPallete.rgba(76,175,80,1), ColorPallete.rgba(139,195,74,1),
       ColorPallete.rgba(205,220,57,1), ColorPallete.rgba(255,235,59,1),

@@ -33,7 +33,11 @@ class TabBarController: UITabBarController {
     tabBar.selectionIndicatorImage = UIImage(named: "item-selection")
     if let items = tabBar.items {
       for item in items {
-        item.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -22.5)
+        if UIDevice.current.userInterfaceIdiom == .phone {
+          item.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -22.5)
+        } else {
+          item.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 0)
+        }
         item.setTitleTextAttributes([
           NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: .medium),
           NSAttributedString.Key.foregroundColor: UIColor.black

@@ -14,6 +14,8 @@ class PhotoViewController: UIViewController {
   @IBOutlet weak var detectButton: UIButton!
   @IBOutlet weak var damageView: UIView!
   @IBOutlet weak var costButton: UIButton!
+  @IBOutlet weak var cameraButtonStackView: UIStackView!
+  @IBOutlet weak var folderButtonStackView: UIStackView!
   
   var processed = false
   var processStarted = false
@@ -26,6 +28,11 @@ class PhotoViewController: UIViewController {
     modelProvider.delegate = self
     predictionLayer = PredictionLayer()
     predictionLayer.addToParentLayer(imageView.layer)
+    
+    cameraButtonStackView.isUserInteractionEnabled = true
+    cameraButtonStackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(takePhoto)))
+    folderButtonStackView.isUserInteractionEnabled = true
+    folderButtonStackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(choosePhoto)))
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -139,7 +146,12 @@ extension PhotoViewController: ModelProviderDelegate {
       predictionLayer.show()
       processed = true
       detectButton.setTitle("Recommencer", for: .normal)
-      costButton.isHidden = false
+      for prediction in predictions {
+        // Show when there are damages
+        if prediction.classIndex == 1 {
+          costButton.isHidden = false
+        }
+      }
       processStarted = false
     }
   }

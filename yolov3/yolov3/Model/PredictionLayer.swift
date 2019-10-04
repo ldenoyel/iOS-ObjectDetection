@@ -27,7 +27,7 @@ class PredictionLayer {
           label: String, confidence: Float,
           color: CGColor) {
       layer.fillColor = UIColor.clear.cgColor
-      layer.lineWidth = 2
+      layer.lineWidth = 4
       let rect = CGRect(x: predRect.origin.x / transform.ratioX + transform.addX,
                         y: predRect.origin.y / transform.ratioY + transform.addY,
                         width: predRect.width / transform.ratioX,
@@ -39,12 +39,18 @@ class PredictionLayer {
       textLayer.foregroundColor = UIColor.black.cgColor
       textLayer.contentsScale = UIScreen.main.scale
       textLayer.fontSize = 9
-      textLayer.font = UIFont(name: "Avenir", size: textLayer.fontSize)
-      textLayer.alignmentMode = CATextLayerAlignmentMode.left
-      textLayer.frame = CGRect(x: rect.origin.x - 1, y: rect.origin.y - 13,
-                               width: 80, height: 14)
+      textLayer.font = UIFont.systemFont(ofSize: 9, weight: .medium)//UIFont(name: "Avenir", size: textLayer.fontSize)
+      textLayer.alignmentMode = CATextLayerAlignmentMode.center
+      var posX = rect.origin.x + (rect.size.width - 86)
+      if posX < 0 {
+        posX += abs(posX) + 5
+      }
+      textLayer.frame = CGRect(x: posX, y: rect.origin.y + rect.size.height,
+                               width: 90, height: 14)
+      textLayer.cornerRadius = 7
       textLayer.backgroundColor = color
-      textLayer.string = "\(label):" + String(format: "%.2f", confidence)
+      textLayer.foregroundColor = UIColor.white.cgColor
+      textLayer.string = "\(label) \(String(format: "%.2f", confidence))"
     }
     
     func addTo(layer: CALayer) {
