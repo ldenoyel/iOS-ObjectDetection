@@ -149,7 +149,7 @@ extension PhotoViewController: ModelProviderDelegate {
       detectButton.setTitle("Recommencer", for: .normal)
       for prediction in predictions {
         // Show when there are damages
-        if prediction.classIndex == 1 {
+        if prediction.classIndex == 2 {
           costButton.isHidden = false
         }
       }

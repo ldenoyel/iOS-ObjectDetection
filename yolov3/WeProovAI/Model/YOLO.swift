@@ -48,7 +48,7 @@ class YOLO: NSObject {
   private let pixelBufferSize = CGSize(width: CGFloat(YOLO.inputSize),
                                        height: CGFloat(YOLO.inputSize))
   private let inputName = "input1"
-  private var classes = [Float](repeating: 0, count: 2)
+  private var classes = [Float](repeating: 0, count: 3)
   private var anchors: [String: Array<Float>]!
   
   var confidenceThreshold: Float

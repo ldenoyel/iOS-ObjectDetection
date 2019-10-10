@@ -9,8 +9,8 @@
 import Foundation
 
 private let defaultModel = YOLOType.v3_416
-private let defaultIOUThreshold: Float = 0.2
-private let defaultConfidenceThreshold: Float = 0.2
+private let defaultIOUThreshold: Float = 0.05
+private let defaultConfidenceThreshold: Float = 0.05
 private let defaultIsSmoothed = true
 
 protocol SettingsDelegate: class {
