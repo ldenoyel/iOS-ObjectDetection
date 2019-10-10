@@ -25,6 +25,7 @@
 		292595F7234635D3002DA5C4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292595F6234635D3002DA5C4 /* TabBarController.swift */; };
 		29497A002345E9F2008D98D1 /* yolo-tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 294979FE2345E9F2008D98D1 /* yolo-tiny.mlmodel */; };
 		29497A012345E9F2008D98D1 /* yolo.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 294979FF2345E9F2008D98D1 /* yolo.mlmodel */; };
+		298B83A7234F558A0018E62D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 298B83A6234F558A0018E62D /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +36,7 @@
 		111A8C3622E2015300F76A50 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		111A8C3822E20B2600F76A50 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		111A8C3E22E706ED00F76A50 /* BBSmoother.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBSmoother.swift; sourceTree = "<group>"; };
-		1132B4C422C633D400E7E509 /* yolov3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yolov3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1132B4C422C633D400E7E509 /* WeProov AI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeProov AI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1132B4C722C633D500E7E509 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1132B4CC22C633D500E7E509 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1132B4D122C633D600E7E509 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +49,7 @@
 		292595F6234635D3002DA5C4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		294979FE2345E9F2008D98D1 /* yolo-tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "yolo-tiny.mlmodel"; path = "../../../Ressources WePrrovAIEXPERIENCE/mlomodels/yolo-tiny.mlmodel"; sourceTree = "<group>"; };
 		294979FF2345E9F2008D98D1 /* yolo.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = yolo.mlmodel; path = "../../../Ressources WePrrovAIEXPERIENCE/mlomodels/yolo.mlmodel"; sourceTree = "<group>"; };
+		298B83A6234F558A0018E62D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		111A044522D5F87B00D93262 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				292595F6234635D3002DA5C4 /* TabBarController.swift */,
 				111A044222D4FB3D00D93262 /* PhotoViewController.swift */,
 				113F20C322D74AEA001837AD /* OnlineViewController.swift */,
 				111A8C3622E2015300F76A50 /* SettingsViewController.swift */,
@@ -87,7 +90,7 @@
 		1132B4BB22C633D400E7E509 = {
 			isa = PBXGroup;
 			children = (
-				1132B4C622C633D400E7E509 /* yolov3 */,
+				1132B4C622C633D400E7E509 /* WeProovAI */,
 				1132B4C522C633D400E7E509 /* Products */,
 			);
 			indentWidth = 2;
@@ -99,12 +102,12 @@
 		1132B4C522C633D400E7E509 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1132B4C422C633D400E7E509 /* yolov3.app */,
+				1132B4C422C633D400E7E509 /* WeProov AI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1132B4C622C633D400E7E509 /* yolov3 */ = {
+		1132B4C622C633D400E7E509 /* WeProovAI */ = {
 			isa = PBXGroup;
 			children = (
 				113F20C222D74A69001837AD /* MLModels */,
@@ -117,9 +120,9 @@
 				1132B4D022C633D600E7E509 /* LaunchScreen.storyboard */,
 				111A044B22D6253800D93262 /* Assets.xcassets */,
 				1132B4D322C633D600E7E509 /* Info.plist */,
-				292595F6234635D3002DA5C4 /* TabBarController.swift */,
+				298B83A6234F558A0018E62D /* Default-568h@2x.png */,
 			);
-			path = yolov3;
+			path = WeProovAI;
 			sourceTree = "<group>";
 		};
 		113F20C222D74A69001837AD /* MLModels */ = {
@@ -134,9 +137,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1132B4C322C633D400E7E509 /* yolov3 */ = {
+		1132B4C322C633D400E7E509 /* WeProovAI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1132B4D622C633D600E7E509 /* Build configuration list for PBXNativeTarget "yolov3" */;
+			buildConfigurationList = 1132B4D622C633D600E7E509 /* Build configuration list for PBXNativeTarget "WeProovAI" */;
 			buildPhases = (
 				1132B4C022C633D400E7E509 /* Sources */,
 				1132B4C122C633D400E7E509 /* Frameworks */,
@@ -146,9 +149,9 @@
 			);
 			dependencies = (
 			);
-			name = yolov3;
+			name = WeProovAI;
 			productName = yolov3;
-			productReference = 1132B4C422C633D400E7E509 /* yolov3.app */;
+			productReference = 1132B4C422C633D400E7E509 /* WeProov AI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -166,7 +169,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1132B4BF22C633D400E7E509 /* Build configuration list for PBXProject "yolov3" */;
+			buildConfigurationList = 1132B4BF22C633D400E7E509 /* Build configuration list for PBXProject "WeProovAI" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -179,7 +182,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1132B4C322C633D400E7E509 /* yolov3 */,
+				1132B4C322C633D400E7E509 /* WeProovAI */,
 			);
 		};
 /* End PBXProject section */
@@ -190,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1132B4D222C633D600E7E509 /* LaunchScreen.storyboard in Resources */,
+				298B83A7234F558A0018E62D /* Default-568h@2x.png in Resources */,
 				111A044C22D6253800D93262 /* Assets.xcassets in Resources */,
 				1132B4CD22C633D500E7E509 /* Main.storyboard in Resources */,
 			);
@@ -363,14 +367,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NTX6F465S6;
-				INFOPLIST_FILE = yolov3/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WeProovAI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = yolov3;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "WeProov AI";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -381,14 +387,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NTX6F465S6;
-				INFOPLIST_FILE = yolov3/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WeProovAI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = yolov3;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "WeProov AI";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -397,7 +405,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1132B4BF22C633D400E7E509 /* Build configuration list for PBXProject "yolov3" */ = {
+		1132B4BF22C633D400E7E509 /* Build configuration list for PBXProject "WeProovAI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1132B4D422C633D600E7E509 /* Debug */,
@@ -406,7 +414,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1132B4D622C633D600E7E509 /* Build configuration list for PBXNativeTarget "yolov3" */ = {
+		1132B4D622C633D600E7E509 /* Build configuration list for PBXNativeTarget "WeProovAI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1132B4D722C633D600E7E509 /* Debug */,
