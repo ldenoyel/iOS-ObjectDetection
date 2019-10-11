@@ -51,7 +51,7 @@ class PredictionLayer {
       textLayer.backgroundColor = color
       textLayer.foregroundColor = UIColor.white.cgColor
 //      textLayer.string = "\(label) \(String(format: "%.2f", confidence))"
-      textLayer.string = "\(label))"
+      textLayer.string = "\(label)"
     }
     
     func addTo(layer: CALayer) {
