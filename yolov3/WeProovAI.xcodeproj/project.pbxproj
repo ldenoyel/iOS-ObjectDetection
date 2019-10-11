@@ -162,7 +162,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = Alexander;
+				ORGANIZATIONNAME = "Proov Group";
 				TargetAttributes = {
 					1132B4C322C633D400E7E509 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -375,7 +375,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = yolov3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.weproov.ia-experience";
 				PRODUCT_NAME = "WeProov AI";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -395,7 +395,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = yolov3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.weproov.ia-experience";
 				PRODUCT_NAME = "WeProov AI";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
