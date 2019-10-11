@@ -50,7 +50,8 @@ class PredictionLayer {
       textLayer.cornerRadius = 7
       textLayer.backgroundColor = color
       textLayer.foregroundColor = UIColor.white.cgColor
-      textLayer.string = "\(label) \(String(format: "%.2f", confidence))"
+//      textLayer.string = "\(label) \(String(format: "%.2f", confidence))"
+      textLayer.string = "\(label))"
     }
     
     func addTo(layer: CALayer) {
