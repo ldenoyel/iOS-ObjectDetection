@@ -17,17 +17,17 @@ enum YOLOType {
   func description() -> String {
     switch self {
     case .v3_416:
-      return "YOLOv3-416"
+      return "Salon"
     case .v3_Tiny:
-      return "YOLOv3-tiny"
+      return "Rue"
     }
   }
   
   static func initFrom(name: String) -> YOLOType {
     switch name {
-    case "YOLOv3-tiny":
+    case "Rue":
       return .v3_Tiny
-    case "YOLOv3-416":
+    case "Salon":
       return .v3_416
     default:
       return .v3_Tiny
@@ -35,7 +35,8 @@ enum YOLOType {
   }
   
   static func modelNames() -> [String] {
-    return ["YOLOv3-tiny", "YOLOv3-416"]
+//    return ["YOLOv3-tiny", "YOLOv3-416"]
+    return ["Rue", "Salon"]
   }
 }
 
@@ -75,7 +76,7 @@ class YOLO: NSObject {
     switch type {
     case .v3_Tiny:
       url = Bundle.main.url(forResource: "yolo-tiny", withExtension:"mlmodelc")
-      self.anchors = tiny_anchors
+      self.anchors = anchors_416
     case .v3_416:
       url = Bundle.main.url(forResource: "yolo", withExtension:"mlmodelc")
       self.anchors = anchors_416
