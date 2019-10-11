@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uBU-Mp-hdj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uBU-Mp-hdj">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +11,7 @@
         <!--Réglages-->
         <scene sceneID="wgD-7U-kS5">
             <objects>
-                <viewController id="6Km-U2-dOY" customClass="SettingsViewController" customModule="yolov3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Km-U2-dOY" customClass="SettingsViewController" customModule="WeProov_AI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lYh-bz-Szi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,7 +235,7 @@
         <!--Photos-->
         <scene sceneID="B3R-DQ-mus">
             <objects>
-                <viewController id="nHS-8v-nIf" customClass="PhotoViewController" customModule="yolov3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nHS-8v-nIf" customClass="PhotoViewController" customModule="WeProov_AI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tfn-r7-9ya">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -285,7 +285,7 @@ depuis la galerie</string>
                                 <rect key="frame" x="0.0" y="114" width="375" height="87"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="gcd-gW-Jp2">
-                                        <rect key="frame" x="45.333333333333343" y="28.666666666666657" width="284.33333333333326" height="30"/>
+                                        <rect key="frame" x="33" y="28.666666666666657" width="309.33333333333331" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chiffrage du dommage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kie-8t-uhH">
                                                 <rect key="frame" x="0.0" y="0.0" width="180.66666666666666" height="30"/>
@@ -293,8 +293,8 @@ depuis la galerie</string>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A VENIR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SN-zu-vjZ">
-                                                <rect key="frame" x="203" y="0.0" width="81" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A VENIR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SN-zu-vjZ">
+                                                <rect key="frame" x="212.66666666666666" y="0.0" width="96.666666666666657" height="30"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -424,7 +424,7 @@ depuis la galerie</string>
         <!--Live-->
         <scene sceneID="tPW-iT-qLj">
             <objects>
-                <viewController storyboardIdentifier="OnlineViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="48p-CH-dor" customClass="OnlineViewController" customModule="yolov3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnlineViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="48p-CH-dor" customClass="OnlineViewController" customModule="WeProov_AI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hUO-ti-3a6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -516,7 +516,7 @@ depuis la galerie</string>
         <!--Tab Bar Controller-->
         <scene sceneID="uKG-6d-9oX">
             <objects>
-                <tabBarController id="uBU-Mp-hdj" customClass="TabBarController" customModule="yolov3" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="uBU-Mp-hdj" customClass="TabBarController" customModule="WeProov_AI" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XFS-Vq-pwb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
