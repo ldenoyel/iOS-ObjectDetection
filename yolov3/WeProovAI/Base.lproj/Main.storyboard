@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uBU-Mp-hdj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uBU-Mp-hdj">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -284,17 +284,17 @@ depuis la galerie</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6N-hv-gMp">
                                 <rect key="frame" x="0.0" y="114" width="375" height="87"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="gcd-gW-Jp2">
-                                        <rect key="frame" x="-26.333333333333343" y="28.666666666666657" width="427.66666666666674" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="gcd-gW-Jp2">
+                                        <rect key="frame" x="24" y="28.666666666666657" width="327" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chiffrage du dommage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kie-8t-uhH">
-                                                <rect key="frame" x="0.0" y="0.0" width="181" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chiffrage du dommage" textAlignment="natural" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Kie-8t-uhH">
+                                                <rect key="frame" x="0.0" y="0.0" width="138.33333333333334" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bientôt Disponible" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SN-zu-vjZ">
-                                                <rect key="frame" x="213" y="0.0" width="214.66666666666663" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Bientôt Disponible" lineBreakMode="tailTruncation" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="6SN-zu-vjZ">
+                                                <rect key="frame" x="170.33333333333337" y="0.0" width="156.66666666666663" height="30"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -305,7 +305,9 @@ depuis la galerie</string>
                                 <color key="backgroundColor" red="0.83529411764705885" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="gcd-gW-Jp2" firstAttribute="centerY" secondItem="m6N-hv-gMp" secondAttribute="centerY" id="CR5-4B-zlg"/>
+                                    <constraint firstItem="gcd-gW-Jp2" firstAttribute="leading" secondItem="m6N-hv-gMp" secondAttribute="leading" constant="24" id="ZFj-Fd-E59"/>
                                     <constraint firstItem="gcd-gW-Jp2" firstAttribute="centerX" secondItem="m6N-hv-gMp" secondAttribute="centerX" id="akm-r6-nYG"/>
+                                    <constraint firstAttribute="trailing" secondItem="gcd-gW-Jp2" secondAttribute="trailing" constant="24" id="d2J-H0-9x2"/>
                                     <constraint firstAttribute="height" constant="87" id="s4v-r7-sjA"/>
                                 </constraints>
                             </view>
